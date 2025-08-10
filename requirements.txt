@@ -1,0 +1,9 @@
+ccxt
+pandas
+pandas-ta
+python-dotenv
+numpy<2.0
+streamlit
+plotly
+requests
+gunicorn

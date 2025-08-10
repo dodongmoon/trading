@@ -1,0 +1,44 @@
+{
+  "split_3x_limits": {
+    "15m": {
+      "max_candles_per_call": 950,
+      "max_calls": 3,
+      "total_max_candles": 2850,
+      "total_max_days": 29,
+      "minutes_per_candle": 15
+    },
+    "30m": {
+      "max_candles_per_call": 950,
+      "max_calls": 3,
+      "total_max_candles": 2850,
+      "total_max_days": 59,
+      "minutes_per_candle": 30
+    },
+    "1h": {
+      "max_candles_per_call": 950,
+      "max_calls": 3,
+      "total_max_candles": 2850,
+      "total_max_days": 118,
+      "minutes_per_candle": 60
+    },
+    "4h": {
+      "max_candles_per_call": 513,
+      "max_calls": 3,
+      "total_max_candles": 1539,
+      "total_max_days": 256,
+      "minutes_per_candle": 240
+    },
+    "1d": {
+      "max_candles_per_call": 85,
+      "max_calls": 3,
+      "total_max_candles": 255,
+      "total_max_days": 255,
+      "minutes_per_candle": 1440
+    }
+  },
+  "generation_info": {
+    "max_splits": 3,
+    "safety_margin": 0.95,
+    "description": "3회 분할 호출을 고려한 최대 백테스팅 기간 설정"
+  }
+}

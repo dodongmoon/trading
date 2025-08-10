@@ -1,0 +1,86 @@
+{
+  "limits_info": {
+    "1m": {
+      "max_candles": 1000,
+      "max_hours": 16.67,
+      "max_days": 0.69
+    },
+    "5m": {
+      "max_candles": 1000,
+      "max_hours": 83.33,
+      "max_days": 3.47
+    },
+    "15m": {
+      "max_candles": 1000,
+      "max_hours": 250.0,
+      "max_days": 10.42
+    },
+    "30m": {
+      "max_candles": 1000,
+      "max_hours": 500.0,
+      "max_days": 20.83
+    },
+    "1h": {
+      "max_candles": 1000,
+      "max_hours": 1000,
+      "max_days": 41.67
+    },
+    "4h": {
+      "max_candles": 540,
+      "max_hours": 2160,
+      "max_days": 90.0
+    },
+    "1d": {
+      "max_candles": 90,
+      "max_hours": 2160,
+      "max_days": 90
+    }
+  },
+  "rate_limits": {
+    "total_requests": 10,
+    "total_time": 1.7930328845977783,
+    "avg_request_time": 0.08520309925079346,
+    "requests_per_second": 5.577142553212708
+  },
+  "ui_config": {
+    "timeframe_limits": {
+      "1m": {
+        "max_days": 0,
+        "max_candles": 950
+      },
+      "5m": {
+        "max_days": 3,
+        "max_candles": 950
+      },
+      "15m": {
+        "max_days": 9,
+        "max_candles": 950
+      },
+      "30m": {
+        "max_days": 19,
+        "max_candles": 950
+      },
+      "1h": {
+        "max_days": 39,
+        "max_candles": 950
+      },
+      "4h": {
+        "max_days": 85,
+        "max_candles": 513
+      },
+      "1d": {
+        "max_days": 85,
+        "max_candles": 85
+      }
+    },
+    "recommended_periods": {
+      "1m": 0,
+      "5m": 3,
+      "15m": 9,
+      "30m": 19,
+      "1h": 30,
+      "4h": 85,
+      "1d": 85
+    }
+  }
+}
