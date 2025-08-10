@@ -405,6 +405,19 @@ def create_integrated_backtesting_ui():
         layout="wide",
         initial_sidebar_state="expanded"
     )
+    # 호스팅 환경에서 메인 컨테이너 폭이 축소되는 현상 방지(TradingView 포함 전역 폭 보정)
+    st.markdown(
+        """
+        <style>
+        /* 메인 컨텐츠 최대 폭 확장 */
+        div.block-container{max-width: 1600px !important;}
+        /* 임베드 컨테이너는 항상 가로 100% 차지 */
+        .tradingview-widget-container{width:100% !important; max-width:100% !important;}
+        .tradingview-widget-container__widget{width:100% !important;}
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
     
     st.title("🚀 통합 백테스팅 시스템")
     st.markdown("**RSI, MACD, 볼린저밴드, 이동평균선을 자유롭게 조합한 복합 전략 백테스팅**")
@@ -969,8 +982,10 @@ MA: type=__, short=__, long=__   (선택한 경우에만 포함)
             </html>
             """
             
-            # HTML 컴포넌트로 표시
-            st.components.v1.html(tradingview_html, height=chart_height)
+            # HTML 컴포넌트로 표시 (전용 컨테이너로 폭 축소 이슈 방지)
+            tv_full = st.container()
+            with tv_full:
+                st.components.v1.html(tradingview_html, height=chart_height)
             
             # 백테스팅 신호 요약 표시
             if len(buy_signals) > 0 or len(sell_signals) > 0:
